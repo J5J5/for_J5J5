@@ -11,17 +11,17 @@
         "maker",
         "generator"
     ],
-    "repository": "https://github.com/qa8tm/checker",
+        "repository": "https://github.com/J5J5/for_J5J5",
     "website": "https://t.me/k_8_u",
     "success_url": "https://t.me/k_8_u",
     "env": {
         "BOT_TOKEN": {
-            "description": "Get from https://t.me/BotFather"
+            "description": "ضع التوكن الخاص بك https://t.me/BotFather"
         },
         "HEROKU": {
-            "description": "heroku name like the first one",
+            "description": "اسم التطبيق [خلي نفس اول شي لتغيير]",
             "required": "False",
-            "value": "k_8_u"
+            "value": "المطور : @K_8_U"
         }
     },
     "stack": "heroku-20",
