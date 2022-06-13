@@ -13,24 +13,6 @@ bot = telebot.TeleBot(BOT_TOKEN)
 server = Flask(__name__)
 logger = telebot.logger
 logger.setLevel(logging.DEBUG)
-
-
-@bot.message_handler(commands=['start'])
-def boten(message):
-	if message.from_user.id == sudo:
-		mas = types.InlineKeyboardMarkup(row_width=2)
-		A = types.InlineKeyboardButton(text ="(KKKK4)", callback_data="F1")
-		K = types.InlineKeyboardButton(text ="(يوزرات ثلاثيه)", callback_data="F3")
-		F = types.InlineKeyboardButton(text ="(UUU8UU)", callback_data="F7")
-		G = types.InlineKeyboardButton(text ="(يوزرات بوتات)", callback_data="F8")
-		M = types.InlineKeyboardButton('DEV', url='https://t.me/K_8_U')
-		mas.add(G,K)
-		mas.add(A,F)
-		mas.add(M)
-		bot.send_message(message.chat.id, f"- أهلاً بكً  !\n\n- بوت تشكير يوزرات تلجرام 🧑‍💻\n\n♻️ لوحة التحكم الخاصه بك ♨️",reply_markup=mas)
-	else:
-		bot.send_message(message.chat.id,"هذا البوت مدفوع وليس لك\n للتفعيل راسل :\n\n@K_8_U او @e_e_2")
-    
     
 @bot.callback_query_handler(func=lambda call: True)
 def masg(call):
@@ -335,6 +317,7 @@ def masg(call):
 				K_8_U = types.InlineKeyboardButton('DEV', url='https://t.me/K_8_U')
 				mas.add(A,E,B,R,K_8_U)
 				bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id,text="ok start",reply_markup=mas)
+				
 	elif message.from_user.id == sudo and message.text == "/start":
 		mas = types.InlineKeyboardMarkup(row_width=2)
 		A = types.InlineKeyboardButton(text ="(KKKK4)", callback_data="F1")
@@ -346,7 +329,7 @@ def masg(call):
 		mas.add(A,F)
 		mas.add(M)
 		bot.send_message(call.message.chat.id, text=f"- أهلاً بكً  !\n\n- بوت تشكير يوزرات تلجرام 🧑‍💻\n\n♻️ لوحة التحكم الخاصه بك ♨️",reply_markup=mas)
-	else:
+	else message.from_user.id != sudo:
 		rr = types.InlineKeyboardMarkup(row_width=2)
 		me = types.InlineKeyboardButton(text="مجهول",url="t.me/k_8_u")
 		he = types.InlineKeyboardButton(text="حلم",url="t.me/e_e_2")
