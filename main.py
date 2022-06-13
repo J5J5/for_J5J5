@@ -5,7 +5,7 @@ from user_agent import generate_user_agent
 import logging
 from config import *
 BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
-sudo = os.environ.get("SUDO", "")
+SUDO = os.environ.get("SUDO", "")
 Heroku = os.environ.get("HEROKU", "APP-NAME")
 APP_URL = "https://"+ Heroku +".herokuapp.com/" + BOT_TOKEN
 from flask import Flask, request
