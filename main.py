@@ -5,6 +5,7 @@ from user_agent import generate_user_agent
 import logging
 from config import *
 BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
+SUDO = os.environ.get("SUDO", "")
 Heroku = os.environ.get("HEROKU", "APP-NAME")
 APP_URL = "https://"+ Heroku +".herokuapp.com/" + BOT_TOKEN
 from flask import Flask, request
@@ -16,16 +17,19 @@ logger.setLevel(logging.DEBUG)
 
 @bot.message_handler(commands=['start'])
 def boten(message):
-    mas = types.InlineKeyboardMarkup(row_width=2)
-    A = types.InlineKeyboardButton(text ="(KKKK4)", callback_data="F1")
-    K = types.InlineKeyboardButton(text ="(يوزرات ثلاثيه)", callback_data="F3")
-    F = types.InlineKeyboardButton(text ="(UUU8UU)", callback_data="F7")
-    G = types.InlineKeyboardButton(text ="(يوزرات بوتات)", callback_data="F8")
-    M = types.InlineKeyboardButton('DEV', url='https://t.me/K_8_U')
-    mas.add(G,K)
-    mas.add(A,F)
-    mas.add(M)
-    bot.send_message(message.chat.id, f"- أهلاً بكً  !\n\n- بوت تشكير يوزرات تلجرام 🧑‍💻\n\n♻️ لوحة التحكم الخاصه بك ♨️",reply_markup=mas)
+	if message.from_user.id == SUDO:
+		mas = types.InlineKeyboardMarkup(row_width=2)
+		A = types.InlineKeyboardButton(text ="(KKKK4)", callback_data="F1")
+		K = types.InlineKeyboardButton(text ="(يوزرات ثلاثيه)", callback_data="F3")
+		F = types.InlineKeyboardButton(text ="(UUU8UU)", callback_data="F7")
+		G = types.InlineKeyboardButton(text ="(يوزرات بوتات)", callback_data="F8")
+		M = types.InlineKeyboardButton('DEV', url='https://t.me/K_8_U')
+		mas.add(G,K)
+		mas.add(A,F)
+		mas.add(M)
+		bot.send_message(message.chat.id, f"- أهلاً بكً  !\n\n- بوت تشكير يوزرات تلجرام 🧑‍💻\n\n♻️ لوحة التحكم الخاصه بك ♨️",reply_markup=mas)
+	else:
+		bot.send_message(message.chat.id,"هذا البوت مدفوع وليس لك\n للتفعيل راسل :\n\n@K_8_U او @e_e_2"
     
     
 @bot.callback_query_handler(func=lambda call: True)
@@ -55,7 +59,6 @@ def masg(call):
 		M = types.InlineKeyboardButton('DEV', url='https://t.me/K_8_U')
 		
 		bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id, text="- أهلاً بكً عزيزي المستخدم \n\n- بوت تشكير يوزرات تلجرام 🧑‍💻\n\n♻️ لوحة التحكم الخاصه بك ♨️",reply_markup=mas)
-
 	elif call.data =="F1":
 		
 		xu = "MNBVCXZLKJHGFDSAPOIUYTREWQ"
