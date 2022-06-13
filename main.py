@@ -110,7 +110,7 @@ def masg(call):
 		bc = types.InlineKeyboardButton(text="رجوع",callback_data="bckkk")
 		e.add(f,c,z)
 		e.add(bc)
-		bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id,"اختر من القائمه بالاسفل .",reply_markup=e)
+		bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id,text="اختر من القائمه بالاسفل .",reply_markup=e)
 	elif call.data =="bckkk":
 		mas = types.InlineKeyboardMarkup(row_width=2)
 		A = types.InlineKeyboardButton(text ="(KKKK4)", callback_data="F1")
