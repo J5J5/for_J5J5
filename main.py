@@ -329,7 +329,7 @@ def masg(call):
 		mas.add(A,F)
 		mas.add(M)
 		bot.send_message(call.message.chat.id, text=f"- أهلاً بكً  !\n\n- بوت تشكير يوزرات تلجرام 🧑‍💻\n\n♻️ لوحة التحكم الخاصه بك ♨️",reply_markup=mas)
-	else message.from_user.id != sudo:
+	else:
 		rr = types.InlineKeyboardMarkup(row_width=2)
 		me = types.InlineKeyboardButton(text="مجهول",url="t.me/k_8_u")
 		he = types.InlineKeyboardButton(text="حلم",url="t.me/e_e_2")
