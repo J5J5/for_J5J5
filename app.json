@@ -18,6 +18,9 @@
         "BOT_TOKEN": {
             "description": "ضع التوكن الخاص بك https://t.me/BotFather"
         },
+        "SUDO": {
+            "description": "ضع الايدي الخاص بك"
+        },
         "HEROKU": {
             "description": "اسم التطبيق [خلي نفس اول شي لتغيير]",
             "required": "False",
