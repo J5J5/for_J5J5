@@ -292,7 +292,7 @@ def masg(call):
 				mas = types.InlineKeyboardMarkup(row_width=2)
 				A = types.InlineKeyboardButton(f'GOOD : {ok}',callback_data="1x")
 				E = types.InlineKeyboardButton(f'EROR : {cp}', callback_data="1x")
-				B = types.InlineKeyboardButton(f'{username}', callback_data="1x")
+				B = types.InlineKeyboardButton(f'{c}', callback_data="1x")
 				R = types.InlineKeyboardButton(f'{sk}', callback_data="1x")
 				M = types.InlineKeyboardButton('DEV', url='https://t.me/K_8_U')
 				mas.add(A,E,B,R,M)
