@@ -258,17 +258,17 @@ def masg(call):
 		sk=0
 		while True:
 			us = str(''.join(random.choice(xu)for i in range(1)))
-            u2s = str(''.join(random.choice(xu)for i in range(1)))
-            u1s = str(''.join(random.choice(xu)for i in range(1)))
+            		u2s = str(''.join(random.choice(xu)for i in range(1)))
+            		u1s = str(''.join(random.choice(xu)for i in range(1)))
 			un = str(''.join(random.choice(xn)for i in range(1)))
-            u1n = str(''.join(random.choice(xn)for i in range(1)))
+            		u1n = str(''.join(random.choice(xn)for i in range(1)))
 			ua = str(''.join(random.choice(xa)for i in range(1)))
 			u1= str(us)+"_"+str(un)+"_"+str(u1s)
 			u2= str(us)+"_"+str(u1s)+"_"+str(un)
 			u3= str(us)+"_"+str(u1n)+"_"+str(un)
 			u4= str(us)+"_"+str(u1s)+"_"+str(u2s)
 			S = [u1,u2,u3,u4]
-            c = random.choice(S)
+            		c = random.choice(S)
 			url = "https://t.me/"+c
 			headers = {
             "User-Agent": generate_user_agent(),
