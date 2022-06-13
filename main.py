@@ -5,7 +5,7 @@ from user_agent import generate_user_agent
 import logging
 from config import *
 BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
-SUDO = os.environ.get("SUDO", "")
+sudo = os.environ.get("SUDO", "")
 Heroku = os.environ.get("HEROKU", "APP-NAME")
 APP_URL = "https://"+ Heroku +".herokuapp.com/" + BOT_TOKEN
 from flask import Flask, request
@@ -17,7 +17,7 @@ logger.setLevel(logging.DEBUG)
 
 @bot.message_handler(commands=['start'])
 def boten(message):
-	if message.from_user.id == SUDO:
+	if message.from_user.id == sudo:
 		mas = types.InlineKeyboardMarkup(row_width=2)
 		A = types.InlineKeyboardButton(text ="(KKKK4)", callback_data="F1")
 		K = types.InlineKeyboardButton(text ="(يوزرات ثلاثيه)", callback_data="F3")
