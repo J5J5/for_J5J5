@@ -29,7 +29,7 @@ def boten(message):
 		mas.add(M)
 		bot.send_message(message.chat.id, f"- أهلاً بكً  !\n\n- بوت تشكير يوزرات تلجرام 🧑‍💻\n\n♻️ لوحة التحكم الخاصه بك ♨️",reply_markup=mas)
 	else:
-		bot.send_message(message.chat.id,"هذا البوت مدفوع وليس لك\n للتفعيل راسل :\n\n@K_8_U او @e_e_2"
+		bot.send_message(message.chat.id,"هذا البوت مدفوع وليس لك\n للتفعيل راسل :\n\n@K_8_U او @e_e_2")
     
     
 @bot.callback_query_handler(func=lambda call: True)
