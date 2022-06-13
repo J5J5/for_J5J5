@@ -34,7 +34,7 @@ def start(message):
 		me = types.InlineKeyboardButton(text="مجهول",url="https://t.me/k_8_u")
 		he = types.InlineKeyboardButton(text="حلم",url="https://t.me/e_e_2")
 		rr.add(me,he)
-		bot.send_message(call.message.chat.id,text="هذا البوت مدفوع وليس لك\n للتفعيل راسل",reply_markup=rr)
+		bot.send_message(message.chat.id,text="هذا البوت مدفوع وليس لك\n للتفعيل راسل",reply_markup=rr)
                
 @bot.callback_query_handler(func=lambda call: True)
 def masg(call):
