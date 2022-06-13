@@ -33,7 +33,8 @@ def start(message):
 		rr = types.InlineKeyboardMarkup(row_width=2)
 		me = types.InlineKeyboardButton(text="مجهول",url="https://t.me/k_8_u")
 		he = types.InlineKeyboardButton(text="حلم",url="https://t.me/e_e_2")
-		rr.add(me,he)
+		ch = types.InlineKeyboardButton(text="▶ قناة البوت ◀",url="https://t.me/c_p_8")
+		rr.add(me,he,ch)
 		bot.send_message(message.chat.id,text="هذا البوت مدفوع وليس لك\n للتفعيل راسل",reply_markup=rr)
                
 @bot.callback_query_handler(func=lambda call: True)
