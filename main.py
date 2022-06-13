@@ -5,7 +5,7 @@ from user_agent import generate_user_agent
 import logging
 from config import *
 BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
-sudo = os.environ.get("SUDO")
+sudo = os.environ.get("SUDO", "")
 Heroku = os.environ.get("HEROKU", "APP-NAME")
 APP_URL = "https://"+ Heroku +".herokuapp.com/" + BOT_TOKEN
 from flask import Flask, request
@@ -13,7 +13,29 @@ bot = telebot.TeleBot(BOT_TOKEN)
 server = Flask(__name__)
 logger = telebot.logger
 logger.setLevel(logging.DEBUG)
-    
+
+
+@bot.message_handler(commands=["start"])
+def start(message):
+	f = message.from_user.id
+	if f == sudo:
+		mas = types.InlineKeyboardMarkup(row_width=2)
+		A = types.InlineKeyboardButton(text ="(KKKK4)", callback_data="F1")
+		K = types.InlineKeyboardButton(text ="(يوزرات ثلاثيه)", callback_data="F3")
+		F = types.InlineKeyboardButton(text ="(UUU8UU)", callback_data="F7")
+		G = types.InlineKeyboardButton(text ="(يوزرات بوتات)", callback_data="F8")
+		M = types.InlineKeyboardButton('DEV', url='https://t.me/K_8_U')
+		mas.add(G,K)
+		mas.add(A,F)
+		mas.add(M)
+		bot.send_message(message.chat.id, text=f"- أهلاً {message.from_user.first_name}  !\n\n- بوت تشكير يوزرات تلجرام 🧑‍💻\n\n♻️ لوحة التحكم الخاصه بك ♨️",reply_markup=mas)
+	else:
+		rr = types.InlineKeyboardMarkup(row_width=2)
+		me = types.InlineKeyboardButton(text="مجهول",url="https://t.me/k_8_u")
+		he = types.InlineKeyboardButton(text="حلم",url="https://t.me/e_e_2")
+		rr.add(me,he)
+		bot.send_message(call.message.chat.id,text="هذا البوت مدفوع وليس لك\n للتفعيل راسل",reply_markup=rr)
+               
 @bot.callback_query_handler(func=lambda call: True)
 def masg(call):
 	
@@ -318,23 +340,6 @@ def masg(call):
 				mas.add(A,E,B,R,K_8_U)
 				bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id,text="ok start",reply_markup=mas)
 				
-	elif message.from_user.id == sudo and message.text == "/start":
-		mas = types.InlineKeyboardMarkup(row_width=2)
-		A = types.InlineKeyboardButton(text ="(KKKK4)", callback_data="F1")
-		K = types.InlineKeyboardButton(text ="(يوزرات ثلاثيه)", callback_data="F3")
-		F = types.InlineKeyboardButton(text ="(UUU8UU)", callback_data="F7")
-		G = types.InlineKeyboardButton(text ="(يوزرات بوتات)", callback_data="F8")
-		M = types.InlineKeyboardButton('DEV', url='https://t.me/K_8_U')
-		mas.add(G,K)
-		mas.add(A,F)
-		mas.add(M)
-		bot.send_message(call.message.chat.id, text=f"- أهلاً بكً  !\n\n- بوت تشكير يوزرات تلجرام 🧑‍💻\n\n♻️ لوحة التحكم الخاصه بك ♨️",reply_markup=mas)
-	else:
-		rr = types.InlineKeyboardMarkup(row_width=2)
-		me = types.InlineKeyboardButton(text="مجهول",url="t.me/k_8_u")
-		he = types.InlineKeyboardButton(text="حلم",url="t.me/e_e_2")
-		rr.add(me,he)
-		bot.send_message(call.message.chat.id,text="هذا البوت مدفوع وليس لك\n للتفعيل راسل",reply_markup=rr)
 
 @server.route(f"/{BOT_TOKEN}", methods=["POST"])
 def redirect_message():
