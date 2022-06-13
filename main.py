@@ -17,7 +17,7 @@ logger.setLevel(logging.DEBUG)
 
 @bot.message_handler(commands=['start'])
 def boten(message):
-	if message.from_user.id == sudo:
+	if message.chat.id == sudo:
 		mas = types.InlineKeyboardMarkup(row_width=2)
 		A = types.InlineKeyboardButton(text ="(KKKK4)", callback_data="F1")
 		K = types.InlineKeyboardButton(text ="(يوزرات ثلاثيه)", callback_data="F3")
