@@ -14,7 +14,10 @@ server = Flask(__name__)
 logger = telebot.logger
 logger.setLevel(logging.DEBUG)
 
-
+@bot.message_handler(commands=["break"])
+def brea():
+	
+	
 @bot.message_handler(commands=["start"])
 def start(message):
 	f = message.from_user.id
