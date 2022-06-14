@@ -82,7 +82,7 @@ def masg(call):
 		B = types.InlineKeyboardButton(text="رجوع",callback_data="bckkk")
 		v.add(K,J,O,I)
 		v.add(B)
-		bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id,"اختر من القائمه بالاسفل .",reply_markup=v)
+		bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id,text="اختر من القائمه بالاسفل .",reply_markup=v)
 	elif call.data =="F1":
 		xu = "MNBVCXZLKJHGFDSAPOIUYTREWQ"
 		xn = "MNBVCXZLKJHGFDSAPOIUYTREWQ"
