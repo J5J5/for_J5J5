@@ -288,7 +288,7 @@ def masg(call):
 			u1n = str(''.join(random.choice(xn)for i in range(1)))
 			ua = str(''.join(random.choice(xa)for i in range(1)))
 			c = str(us)+"_"+str(u1s)+"_"+str(u2s)
-			url = "https://t.me/"+u1
+			url = "https://t.me/"+c
 			headers = {
             "User-Agent": generate_user_agent(),
             "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
@@ -326,7 +326,7 @@ def masg(call):
 			u1n = str(''.join(random.choice(xn)for i in range(1)))
 			ua = str(''.join(random.choice(xa)for i in range(1)))
 			c = str(us)+"_"+str(un)+"_"+str(u1n)
-			url = "https://t.me/"+u1
+			url = "https://t.me/"+c
 			headers = {
             "User-Agent": generate_user_agent(),
             "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
@@ -364,7 +364,7 @@ def masg(call):
 			u1n = str(''.join(random.choice(xn)for i in range(1)))
 			ua = str(''.join(random.choice(xa)for i in range(1)))
 			c = str(us)+"_"+str(u1s)+"_"+str(un)
-			url = "https://t.me/"+u1
+			url = "https://t.me/"+c
 			headers = {
             "User-Agent": generate_user_agent(),
             "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
