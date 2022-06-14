@@ -311,7 +311,7 @@ def masg(call):
 				M = types.InlineKeyboardButton('DEV', url='https://t.me/K_8_U')
 				mas.add(A,E,B,R,M)
 				bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id,text="ok start",reply_markup=mas)
-    elif call.data =="F5":
+	elif call.data =="F5":
 		xu = "MNBVCXZLKJHGFDSAPOIUYTREWQ"
 		xn = "1234567890"
 		xa = "MNBVCXZLKJHGFDSAPOIUYTREWQ"
@@ -349,7 +349,7 @@ def masg(call):
 				M = types.InlineKeyboardButton('DEV', url='https://t.me/K_8_U')
 				mas.add(A,E,B,R,M)
 				bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id,text="ok start",reply_markup=mas)
-    elif call.data =="F4":
+	elif call.data =="F4":
 		xu = "MNBVCXZLKJHGFDSAPOIUYTREWQ"
 		xn = "1234567890"
 		xa = "MNBVCXZLKJHGFDSAPOIUYTREWQ"
@@ -387,7 +387,7 @@ def masg(call):
 				M = types.InlineKeyboardButton('DEV', url='https://t.me/K_8_U')
 				mas.add(A,E,B,R,M)
 				bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id,text="ok start",reply_markup=mas)
-    elif call.data =="F3":
+	elif call.data =="F3":
 		xu = "MNBVCXZLKJHGFDSAPOIUYTREWQ"
 		xn = "1234567890"
 		xa = "MNBVCXZLKJHGFDSAPOIUYTREWQ"
@@ -425,10 +425,7 @@ def masg(call):
 				M = types.InlineKeyboardButton('DEV', url='https://t.me/K_8_U')
 				mas.add(A,E,B,R,M)
 				bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id,text="ok start",reply_markup=mas)
-				
-				
-				
-    elif call.data =="F7":
+	elif call.data =="F7":
 		xu = "MNBVCXZLKJHGFDSAPOIUYTREWQ"
 		xn = "1234567890"
 		xa = "MNBVCXZLKJHGFDSAPOIUYTREWQ"
