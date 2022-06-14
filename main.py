@@ -14,8 +14,14 @@ server = Flask(__name__)
 logger = telebot.logger
 logger.setLevel(logging.DEBUG)
 
-@bot.message_handler(commands=["break"])
-def brea():
+@bot.message_handler(commands=['stop'])
+def daynney(message):
+    while True:
+        bot.send_message(message.chat.id, 'ارسل /start مره اخرى!')
+        if message.text == '/stop':
+            break
+        sleep(1)
+
 	
 	
 @bot.message_handler(commands=["start"])
