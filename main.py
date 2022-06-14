@@ -30,7 +30,7 @@ def start(message):
 	if f == SUDO:
 		mas = types.InlineKeyboardMarkup(row_width=2)
 		A = types.InlineKeyboardButton(text ="(KKKK4)", callback_data="F1")
-		K = types.InlineKeyboardButton(text ="(يوزرات ثلاثيه)", callback_data="F3")
+		K = types.InlineKeyboardButton(text ="(يوزرات ثلاثيه)", callback_data="SS")
 		F = types.InlineKeyboardButton(text ="(UUU8UU)", callback_data="F7")
 		G = types.InlineKeyboardButton(text ="(يوزرات بوتات)", callback_data="F8")
 		M = types.InlineKeyboardButton('DEV', url='https://t.me/K_8_U')
@@ -73,8 +73,17 @@ def masg(call):
 		M = types.InlineKeyboardButton('DEV', url='https://t.me/K_8_U')
 		
 		bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id, text="- أهلاً بكً عزيزي المستخدم \n\n- بوت تشكير يوزرات تلجرام 🧑‍💻\n\n♻️ لوحة التحكم الخاصه بك ♨️",reply_markup=mas)
-	elif call.data =="F1":
-		
+    elif call.data == "SS":
+    	v = types.InlineKeyboardMarkup(row_width=2)
+    	K = types.InlineKeyboardButton(text ="(Q_8_P)", callback_data="F3"
+		J = types.InlineKeyboardButton(text ="(N_G_6)", callback_data="F4")
+		I = types.InlineKeyboardButton(text ="(B_5_7)", callback_data="F5")
+		O = types.InlineKeyboardButton(text ="(I_C_E)", callback_data="F6")
+		B = types.InlineKeyboardButton(text="رجوع",callback_data="bckkk")
+		v.add(K,J,O,I)
+		v.add(B)
+		bot.send_message(call.message.chat.id,"اختر من القائمه بالاسفل .",reply_markup=v)
+    elif call.data =="F1":
 		xu = "MNBVCXZLKJHGFDSAPOIUYTREWQ"
 		xn = "MNBVCXZLKJHGFDSAPOIUYTREWQ"
 		xa = "1234567890"
@@ -128,7 +137,7 @@ def masg(call):
 	elif call.data =="bckkk":
 		mas = types.InlineKeyboardMarkup(row_width=2)
 		A = types.InlineKeyboardButton(text ="(KKKK4)", callback_data="F1")
-		K = types.InlineKeyboardButton(text ="(يوزرات ثلاثيه)", callback_data="F3")	
+		K = types.InlineKeyboardButton(text ="(يوزرات ثلاثيه)", callback_data="SS")	
 		F = types.InlineKeyboardButton(text ="(UUU4UU)", callback_data="F7")
 		G = types.InlineKeyboardButton(text ="(يوزرات بوتات)", callback_data="F8")
 		M = types.InlineKeyboardButton('DEV', url='https://t.me/K_8_U')
@@ -137,6 +146,7 @@ def masg(call):
 		mas.add(M)
 		bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id, text="- أهلاً بكً عزيزي المستخدم \n\n- بوت تشكير يوزرات تلجرام 🧑‍💻\n\n♻️ لوحة التحكم الخاصه بك ♨️",reply_markup=mas)
 		
+	
 	elif call.data =="b4":
 		xu = "MNBVCXZLKJHGFDSAPOIUYTREWQ"
 		xn = "1234567890"
@@ -263,7 +273,7 @@ def masg(call):
 				M = types.InlineKeyboardButton('DEV', url='https://t.me/K_8_U')
 				mas.add(A,E,B,R,M)
 				bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id,text="ok start",reply_markup=mas)
-	elif call.data =="F3":
+	elif call.data =="F6":
 		xu = "MNBVCXZLKJHGFDSAPOIUYTREWQ"
 		xn = "1234567890"
 		xa = "MNBVCXZLKJHGFDSAPOIUYTREWQ"
@@ -277,13 +287,122 @@ def masg(call):
 			un = str(''.join(random.choice(xn)for i in range(1)))
 			u1n = str(''.join(random.choice(xn)for i in range(1)))
 			ua = str(''.join(random.choice(xa)for i in range(1)))
-			u1= str(us)+"_"+str(un)+"_"+str(u1s)
-			u2= str(us)+"_"+str(u1s)+"_"+str(un)
-			u3= str(us)+"_"+str(u1n)+"_"+str(un)
-			u4= str(us)+"_"+str(u1s)+"_"+str(u2s)
-			S = [u1,u2,u3,u4]
-			c = random.choice(S)
-			url = "https://t.me/"+c
+			c = str(us)+"_"+str(u1s)+"_"+str(u2s)
+			url = "https://t.me/"+u1
+			headers = {
+            "User-Agent": generate_user_agent(),
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
+            "Accept-Encoding": "gzip, deflate, br",
+            "Accept-Language" : "ar-EG,ar;q=0.9,en-US;q=0.8,en;q=0.7"}
+			response = requests.get(url, headers=headers)
+			if response.text.find('If you have <strong>Telegram</strong>, you can contact <a class="tgme_username_link"')>=0:
+				ok+=1
+				sk+=1
+				bot.send_message(call.message.chat.id,f"‹ يوزرات تلي متاحه ✓\n────── • ✧✧ • ──────\n‹ صدتلك يوزر : @{c}\n────── • ✧✧ • ──────\n• مطور البوت @K_8_U")
+				
+			else:
+				cp+=1
+				sk+=1
+				mas = types.InlineKeyboardMarkup(row_width=2)
+				A = types.InlineKeyboardButton(f'GOOD : {ok}',callback_data="1x")
+				E = types.InlineKeyboardButton(f'EROR : {cp}', callback_data="1x")
+				B = types.InlineKeyboardButton(f'{c}', callback_data="1x")
+				R = types.InlineKeyboardButton(f'{sk}', callback_data="1x")
+				M = types.InlineKeyboardButton('DEV', url='https://t.me/K_8_U')
+				mas.add(A,E,B,R,M)
+				bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id,text="ok start",reply_markup=mas)
+    elif call.data =="F5":
+		xu = "MNBVCXZLKJHGFDSAPOIUYTREWQ"
+		xn = "1234567890"
+		xa = "MNBVCXZLKJHGFDSAPOIUYTREWQ"
+		ok=0
+		cp=0
+		sk=0
+		while True:
+			us = str(''.join(random.choice(xu)for i in range(1)))
+			u2s = str(''.join(random.choice(xu)for i in range(1)))
+			u1s = str(''.join(random.choice(xu)for i in range(1)))
+			un = str(''.join(random.choice(xn)for i in range(1)))
+			u1n = str(''.join(random.choice(xn)for i in range(1)))
+			ua = str(''.join(random.choice(xa)for i in range(1)))
+			c = str(us)+"_"+str(un)+"_"+str(u1n)
+			url = "https://t.me/"+u1
+			headers = {
+            "User-Agent": generate_user_agent(),
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
+            "Accept-Encoding": "gzip, deflate, br",
+            "Accept-Language" : "ar-EG,ar;q=0.9,en-US;q=0.8,en;q=0.7"}
+			response = requests.get(url, headers=headers)
+			if response.text.find('If you have <strong>Telegram</strong>, you can contact <a class="tgme_username_link"')>=0:
+				ok+=1
+				sk+=1
+				bot.send_message(call.message.chat.id,f"‹ يوزرات تلي متاحه ✓\n────── • ✧✧ • ──────\n‹ صدتلك يوزر : @{c}\n────── • ✧✧ • ──────\n• مطور البوت @K_8_U")
+				
+			else:
+				cp+=1
+				sk+=1
+				mas = types.InlineKeyboardMarkup(row_width=2)
+				A = types.InlineKeyboardButton(f'GOOD : {ok}',callback_data="1x")
+				E = types.InlineKeyboardButton(f'EROR : {cp}', callback_data="1x")
+				B = types.InlineKeyboardButton(f'{c}', callback_data="1x")
+				R = types.InlineKeyboardButton(f'{sk}', callback_data="1x")
+				M = types.InlineKeyboardButton('DEV', url='https://t.me/K_8_U')
+				mas.add(A,E,B,R,M)
+				bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id,text="ok start",reply_markup=mas)
+    elif call.data =="F4":
+		xu = "MNBVCXZLKJHGFDSAPOIUYTREWQ"
+		xn = "1234567890"
+		xa = "MNBVCXZLKJHGFDSAPOIUYTREWQ"
+		ok=0
+		cp=0
+		sk=0
+		while True:
+			us = str(''.join(random.choice(xu)for i in range(1)))
+			u2s = str(''.join(random.choice(xu)for i in range(1)))
+			u1s = str(''.join(random.choice(xu)for i in range(1)))
+			un = str(''.join(random.choice(xn)for i in range(1)))
+			u1n = str(''.join(random.choice(xn)for i in range(1)))
+			ua = str(''.join(random.choice(xa)for i in range(1)))
+			c = str(us)+"_"+str(u1s)+"_"+str(un)
+			url = "https://t.me/"+u1
+			headers = {
+            "User-Agent": generate_user_agent(),
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
+            "Accept-Encoding": "gzip, deflate, br",
+            "Accept-Language" : "ar-EG,ar;q=0.9,en-US;q=0.8,en;q=0.7"}
+			response = requests.get(url, headers=headers)
+			if response.text.find('If you have <strong>Telegram</strong>, you can contact <a class="tgme_username_link"')>=0:
+				ok+=1
+				sk+=1
+				bot.send_message(call.message.chat.id,f"‹ يوزرات تلي متاحه ✓\n────── • ✧✧ • ──────\n‹ صدتلك يوزر : @{c}\n────── • ✧✧ • ──────\n• مطور البوت @K_8_U")
+				
+			else:
+				cp+=1
+				sk+=1
+				mas = types.InlineKeyboardMarkup(row_width=2)
+				A = types.InlineKeyboardButton(f'GOOD : {ok}',callback_data="1x")
+				E = types.InlineKeyboardButton(f'EROR : {cp}', callback_data="1x")
+				B = types.InlineKeyboardButton(f'{c}', callback_data="1x")
+				R = types.InlineKeyboardButton(f'{sk}', callback_data="1x")
+				M = types.InlineKeyboardButton('DEV', url='https://t.me/K_8_U')
+				mas.add(A,E,B,R,M)
+				bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id,text="ok start",reply_markup=mas)
+    elif call.data =="F3":
+		xu = "MNBVCXZLKJHGFDSAPOIUYTREWQ"
+		xn = "1234567890"
+		xa = "MNBVCXZLKJHGFDSAPOIUYTREWQ"
+		ok=0
+		cp=0
+		sk=0
+		while True:
+			us = str(''.join(random.choice(xu)for i in range(1)))
+			u2s = str(''.join(random.choice(xu)for i in range(1)))
+			u1s = str(''.join(random.choice(xu)for i in range(1)))
+			un = str(''.join(random.choice(xn)for i in range(1)))
+			u1n = str(''.join(random.choice(xn)for i in range(1)))
+			ua = str(''.join(random.choice(xa)for i in range(1)))
+			c = str(us)+"_"+str(un)+"_"+str(u1s)
+			url = "https://t.me/"+u1
 			headers = {
             "User-Agent": generate_user_agent(),
             "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
