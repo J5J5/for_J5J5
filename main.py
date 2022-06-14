@@ -73,9 +73,9 @@ def masg(call):
 		M = types.InlineKeyboardButton('DEV', url='https://t.me/K_8_U')
 		
 		bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id, text="- أهلاً بكً عزيزي المستخدم \n\n- بوت تشكير يوزرات تلجرام 🧑‍💻\n\n♻️ لوحة التحكم الخاصه بك ♨️",reply_markup=mas)
-    elif call.data == "SS":
-    	v = types.InlineKeyboardMarkup(row_width=2)
-    	K = types.InlineKeyboardButton(text ="(Q_8_P)", callback_data="F3"
+        elif call.data == "SS":
+		v = types.InlineKeyboardMarkup(row_width=2)
+		K = types.InlineKeyboardButton(text ="(Q_8_P)", callback_data="F3")
 		J = types.InlineKeyboardButton(text ="(N_G_6)", callback_data="F4")
 		I = types.InlineKeyboardButton(text ="(B_5_7)", callback_data="F5")
 		O = types.InlineKeyboardButton(text ="(I_C_E)", callback_data="F6")
@@ -83,7 +83,7 @@ def masg(call):
 		v.add(K,J,O,I)
 		v.add(B)
 		bot.send_message(call.message.chat.id,"اختر من القائمه بالاسفل .",reply_markup=v)
-    elif call.data =="F1":
+	elif call.data =="F1":
 		xu = "MNBVCXZLKJHGFDSAPOIUYTREWQ"
 		xn = "MNBVCXZLKJHGFDSAPOIUYTREWQ"
 		xa = "1234567890"
