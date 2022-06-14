@@ -428,7 +428,7 @@ def masg(call):
 				
 				
 				
-	elif call.data =="F7":
+    elif call.data =="F7":
 		xu = "MNBVCXZLKJHGFDSAPOIUYTREWQ"
 		xn = "1234567890"
 		xa = "MNBVCXZLKJHGFDSAPOIUYTREWQ"
