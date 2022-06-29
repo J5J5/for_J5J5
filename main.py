@@ -137,9 +137,9 @@ def masg(call):
 		bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id,text="اختر من القائمه بالاسفل .",reply_markup=e)
 	elif call.data =="F100":
 		e = types.InlineKeyboardMarkup(row_width=2)
-		f = types.InlineKeyboardButton(text="(vv_vv)",callback_data="b5")
+		f = types.InlineKeyboardButton(text="(vv_vv)",callback_data="ew1")
 		c = types.InlineKeyboardButton(text="(UUU4UU)",callback_data="F7")
-		d = types.InlineKeyboardButton(text="(FFAAA)",callback_data="b6")
+		d = types.InlineKeyboardButton(text="(FFAAA)",callback_data="ew")
 		z = types.InlineKeyboardButton(text="(KKKK4)",callback_data="F1")
 		bc = types.InlineKeyboardButton(text="رجوع",callback_data="bckkk")
 		e.add(f,c,z,d)
@@ -199,7 +199,7 @@ def masg(call):
 				mas.add(A,E,B,R,M)
 				bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id,text="ok start",reply_markup=mas)
 	
-	elif call.data =="b5":
+	elif call.data =="ew1":
 		xu = "MNBVCXZLKJHGFDSAPOIUYTREWQ"
 		xn = "1234567890"
 		xa = "MNBVCXZLKJHGFDSAPOIUYTREWQ"
@@ -240,7 +240,7 @@ def masg(call):
 				M = types.InlineKeyboardButton('DEV', url='https://t.me/K_8_U')
 				mas.add(A,E,B,R,M)
 				bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id,text="ok start",reply_markup=mas)
-	elif call.data =="b6":
+	elif call.data =="ew":
 		xu = "MNBVCXZLKJHGFDSAPOIUYTREWQ"
 		xn = "1234567890"
 		xa = "MNBVCXZLKJHGFDSAPOIUYTREWQ"
