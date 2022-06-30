@@ -24,7 +24,7 @@
         "HEROKU": {
             "description": "اسم التطبيق [خلي نفس اول شي لتغيير]",
             "required": "False",
-            "value": "المطور : @K_8_U"
+            "value": "APP-NAME"
         }
     },
     "stack": "heroku-20",
