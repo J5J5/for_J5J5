@@ -41,7 +41,7 @@ def start(message):
 		rr = types.InlineKeyboardMarkup(row_width=2)
 		me = types.InlineKeyboardButton(text="مجهول",url="https://t.me/k_8_u")
 		he = types.InlineKeyboardButton(text="حلم",url="https://t.me/n_n_v")
-		de = types.InlineKeyboradButton(text="دراكون",url="https://t.me/s_l_3")
+		de = types.InlineKeyboaradButton(text="دراكون",url="https://t.me/s_l_3")
 		ch = types.InlineKeyboardButton(text="▶ قناة البوت ◀",url="https://t.me/c_p_8")
 		rr.add(me,he,de)
 		rr.add(ch)
