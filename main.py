@@ -80,7 +80,7 @@ def masg(call):
 		J = types.InlineKeyboardButton(text ="(N_G_6)", callback_data="F4")
 		I = types.InlineKeyboardButton(text ="(B_5_7)", callback_data="F5")
 		O = types.InlineKeyboardButton(text ="(I_C_E)", callback_data="F6")
-		S = types.InlineKeyboardButton(text ="(G_K_K)", callback_data="F7")
+		S = types.InlineKeyboardButton(text ="(G_K_K)", callback_data="F10")
 		B = types.InlineKeyboardButton(text="رجوع",callback_data="bckkk")
 		v.add(K,J,O,I)
 		v.add(B)
@@ -557,7 +557,7 @@ def masg(call):
 				mas.add(A,E,B,R,K_8_U)
 				bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id,text="ok start",reply_markup=mas)
 				
-        elif call.data =="F7":
+        elif call.data =="F10":
 		xu = "MNBVCXZLKJHGFDSAPOIUYTREWQ"
 		xn = "1234567890"
 		xa = "MNBVCXZLKJHGFDSAPOIUYTREWQ"
