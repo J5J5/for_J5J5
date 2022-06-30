@@ -80,6 +80,7 @@ def masg(call):
 		J = types.InlineKeyboardButton(text ="(N_G_6)", callback_data="F4")
 		I = types.InlineKeyboardButton(text ="(B_5_7)", callback_data="F5")
 		O = types.InlineKeyboardButton(text ="(I_C_E)", callback_data="F6")
+		S = types.InlineKeyboardButton(text ="(G_K_K)", callback_data="F7")
 		B = types.InlineKeyboardButton(text="رجوع",callback_data="bckkk")
 		v.add(K,J,O,I)
 		v.add(B)
@@ -556,7 +557,48 @@ def masg(call):
 				mas.add(A,E,B,R,K_8_U)
 				bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id,text="ok start",reply_markup=mas)
 				
-
+        elif call.data =="F7":
+		xu = "MNBVCXZLKJHGFDSAPOIUYTREWQ"
+		xn = "1234567890"
+		xa = "MNBVCXZLKJHGFDSAPOIUYTREWQ"
+		ok=0
+		cp=0
+		sk=0
+		while True:
+			us = str(''.join(random.choice(xu)for i in range(1)))
+			u2s = str(''.join(random.choice(xu)for i in range(1)))
+			u1s = str(''.join(random.choice(xu)for i in range(1)))
+			un = str(''.join(random.choice(xn)for i in range(1)))
+			u1n = str(''.join(random.choice(xn)for i in range(1)))
+			ua = str(''.join(random.choice(xa)for i in range(1)))
+			c = str(us)+"_"+str(us)+"_"+str(u2s)
+			d = str(u1s)+"_"+str(us)+"_"+str(us)
+			v = str(us)+"_"+str(u1s)+"_"+str(us)
+			cs = [c,d,v]
+			cc = random.choice(cs)
+			url = "https://t.me/"+cc
+			headers = {
+            "User-Agent": generate_user_agent(),
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
+            "Accept-Encoding": "gzip, deflate, br",
+            "Accept-Language" : "ar-EG,ar;q=0.9,en-US;q=0.8,en;q=0.7"}
+			response = requests.get(url, headers=headers)
+			if response.text.find('If you have <strong>Telegram</strong>, you can contact <a class="tgme_username_link"')>=0:
+				ok+=1
+				sk+=1
+				bot.send_message(call.message.chat.id,f"‹ يوزرات تلي متاحه ✓\n────── • ✧✧ • ──────\n‹ صدتلك يوزر : @{cc}\n────── • ✧✧ • ──────\n• مطور البوت @K_8_U")
+				
+			else:
+				cp+=1
+				sk+=1
+				mas = types.InlineKeyboardMarkup(row_width=2)
+				A = types.InlineKeyboardButton(f'GOOD : {ok}',callback_data="1x")
+				E = types.InlineKeyboardButton(f'EROR : {cp}', callback_data="1x")
+				B = types.InlineKeyboardButton(f'{c}', callback_data="1x")
+				R = types.InlineKeyboardButton(f'{sk}', callback_data="1x")
+				M = types.InlineKeyboardButton('DEV', url='https://t.me/K_8_U')
+				mas.add(A,E,B,R,M)
+				bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id,text="ok start",reply_markup=mas)
 @server.route(f"/{BOT_TOKEN}", methods=["POST"])
 def redirect_message():
     json_string = request.get_data().decode("utf-8")
