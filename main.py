@@ -574,7 +574,10 @@ def masg(call):
 			c = str(us)+"_"+str(us)+"_"+str(u2s)
 			d = str(u1s)+"_"+str(us)+"_"+str(us)
 			v = str(us)+"_"+str(u1s)+"_"+str(us)
-			cs = [c,d,v]
+			p = str(us)+"_"+str(un)+"_"+str(us)
+                        m = str(us)+"_"+str(us)+"_"+str(un)
+                        i = str(us)+"_"+str(un)+"_"+str(un)
+			cs = [c,d,v,p,m,i]
 			cc = random.choice(cs)
 			url = "https://t.me/"+cc
 			headers = {
