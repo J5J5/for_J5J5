@@ -557,7 +557,7 @@ def masg(call):
 				mas.add(A,E,B,R,K_8_U)
 				bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id,text="ok start",reply_markup=mas)
 				
-        elif call.data =="F10":
+    elif call.data =="F10":
 		xu = "MNBVCXZLKJHGFDSAPOIUYTREWQ"
 		xn = "1234567890"
 		xa = "MNBVCXZLKJHGFDSAPOIUYTREWQ"
