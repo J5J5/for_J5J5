@@ -27,7 +27,7 @@ def daynney(message):
 @bot.message_handler(commands=["start"])
 def start(message):
 	f = message.from_user.id
-	if f == SUDO or 5359109940:
+	if f == SUDO:
 		mas = types.InlineKeyboardMarkup(row_width=2)
 		K = types.InlineKeyboardButton(text ="(يوزرات ثلاثيه)", callback_data="SS")	
 		G = types.InlineKeyboardButton(text ="(يوزرات بوتات)", callback_data="F8")
