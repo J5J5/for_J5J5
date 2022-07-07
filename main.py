@@ -14,7 +14,8 @@ server = Flask(__name__)
 logger = telebot.logger
 logger.setLevel(logging.DEBUG)
 
-ban = ['Z_K_1','T_N_3','Y_L_6','K_A_2','S_X_1',
+ban = ['T_4_Y','K_M_E','F_8_W','Z_K_1','T_N_3',
+       'Y_L_6','K_A_2','S_X_1','C_R_J','Y_6_S',
        'F_P_7','Q_I_9','R_Y_2','I_M_9','C_J_7',
        'T_P_4','Y_P_7','Q_K_9','C_J_7','J_I_2',
        'M_K_6','H_B_3','E_G_8','J_I_2','C_B_6',
@@ -29,7 +30,7 @@ ban = ['Z_K_1','T_N_3','Y_L_6','K_A_2','S_X_1',
        'X_T_7','S_X_1','V_F_9','W_P_6','O_Y_1',
        'C_D_6','C_F_5','S_X_9','U_X_0','J_I_2',
        'J_J_3','X_W_4','I_M_9','X_U_4','T_J_8',
-       'O_Y_1','Q_K_9',',I_6_W','B_6_V','Y_4_N',
+       'O_Y_1','Q_K_9','I_6_W','B_6_V','Y_4_N',
        'P_9_T','V_8_W','T_2_Y','J_9_N','A_7_C',
        'X_7_W','C_1_K','O_9_F','G_8_M','L_3_D',
        'P_3_M','W_5_F','N_7_G','P_1_R','U_8_Q',
