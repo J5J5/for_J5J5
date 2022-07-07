@@ -14,6 +14,22 @@ server = Flask(__name__)
 logger = telebot.logger
 logger.setLevel(logging.DEBUG)
 
+ban = ['Z_K_1','T_N_3','Y_L_6','K_A_2','S_X_1',
+       'F_P_7','Q_I_9','R_Y_2','I_M_9','C_J_7',
+       'T_P_4','Y_P_7','Q_K_9','C_J_7','J_I_2',
+       'M_K_6','H_B_3','E_G_8','J_I_2','C_B_6',
+       'A_D_6','L_O_8','O_Y_1','C_T_7','Y_O_4',
+       'S_X_9','Y_E_5','U_C_7','U_T_3','N_P_6',
+       'Q_I_9','B_W_9','Q_H_1','P_L_3','N_X_8',
+       'E_G_8','I_J_4','Y_E_5','P_R_0','F_M_0',
+       'Q_L_4','J_J_9','B_M_9','E_G_8','P_K_9',
+       'U_T_3','G_V_5','R_A_4','R_Y_2','M_J_8',
+       'F_D_5','Y_E_5','Q_K_9','M_K_6','X_D_4',
+       'Y_P_1','Z_K_1','S_E_4','C_J_7','T_Z_7',
+       'X_T_7','S_X_1','V_F_9','W_P_6','O_Y_1',
+       'C_D_6','C_F_5','S_X_9','U_X_0','J_I_2',
+       'J_J_3','X_W_4','I_M_9','X_U_4','T_J_8',
+       'O_Y_1','Q_K_9']
 @bot.message_handler(commands=['stop'])
 def daynney(message):
     while True:
