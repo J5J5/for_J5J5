@@ -50,9 +50,8 @@ def daynney(message):
     while True:
         bot.send_message(message.chat.id, 'انتظر 10 ثواني ومن ثم ارسل /start')
 	print('تم خوات الكحبه')
-	
+	break
 	sleep(10)
-	
 @bot.message_handler(commands=["start"])
 def start(message):
 	f = message.from_user.id
