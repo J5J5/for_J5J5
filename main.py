@@ -48,10 +48,9 @@ ban = ['T_4_Y','K_M_E','F_8_W','Z_K_1','T_N_3',
 @bot.message_handler(commands=['stop'])
 def daynney(message):
     while True:
-        bot.send_message(message.chat.id, 'ارسل /start مره اخرى!')
-	
-
-	
+        bot.send_message(message.chat.id, 'انتظر 10 ثواني ومن ثم ارسل /start')
+	print('تم خوات الكحبه')
+	sleep(10)
 	
 @bot.message_handler(commands=["start"])
 def start(message):
