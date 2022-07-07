@@ -40,7 +40,8 @@ ban = ['Z_K_1','T_N_3','Y_L_6','K_A_2','S_X_1',
        'V_6_M','E_0_P','R_1_D','W_0_C','J_8_C',
        'V_4_E','N_7_G','Z_4_V','G_1_P','Q_8_P',
        'L_3_D','V_8_W','B_4_D','X_6_L','X_7_W',
-       'R_6_R','H_0_Y','X_9_Y','A_1_N','F_0_I']
+       'R_6_R','H_0_Y','X_9_Y','A_1_N','F_0_I',
+      'E_5_Q','F_3_E','O_3_K']
 @bot.message_handler(commands=['stop'])
 def daynney(message):
     while True:
