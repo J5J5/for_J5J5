@@ -49,9 +49,7 @@ ban = ['T_4_Y','K_M_E','F_8_W','Z_K_1','T_N_3',
 def daynney(message):
     while True:
         bot.send_message(message.chat.id, 'ارسل /start مره اخرى!')
-        if message.text == '/stop':
-            break
-        sleep(1)
+	
 
 	
 	
