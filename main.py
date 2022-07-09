@@ -76,7 +76,8 @@ ban = ['T_4_Y','K_M_E','F_8_W','Z_K_1','T_N_3',
        'Y_W_J','T_P_V','T_D_T','D_S_O','I_F_M',
        'X_N_P','Q_U_W','Q_D_O','C_U_P','T_F_O',
        'K_Z_U','S_X_S','B_T_S','K_Z_A','Z_P_S',
-       'V_T_J','V_Y_Z','N_J_C','C_F_C','I_V_S']
+       'V_T_J','V_Y_Z','N_J_C','C_F_C','I_V_S',
+       'F_P_G','T_B_M','V_F_X','J_G_H','O_P_M']
 
 @bot.message_handler(commands=["start"])
 def start(message):
