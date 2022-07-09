@@ -7,6 +7,7 @@ from config import *
 BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
 SUDO = int(os.environ.get("SUDO","5359109940"))
 Heroku = os.environ.get("HEROKU", "APP-NAME")
+owner = os.environ.get("OWNER","")
 APP_URL = "https://"+ Heroku +".herokuapp.com/" + BOT_TOKEN
 from flask import Flask, request
 bot = telebot.TeleBot(BOT_TOKEN)
@@ -96,7 +97,7 @@ def start(message):
 		ch = types.InlineKeyboardButton(text="▶ قناة البوت ◀",url="https://t.me/c_p_8")
 		rr.add(me,he,de)
 		rr.add(ch)
-		bot.send_message(message.chat.id,text="هذا البوت مدفوع وليس لك\n للتفعيل راسل",reply_markup=rr)
+		bot.send_message(message.chat.id,text="هذا البوت مدفوع وليس لك \nصاحب البوت : {owner}\nللتفعيل راسل :",reply_markup=rr)
                
 @bot.callback_query_handler(func=lambda call: True)
 def masg(call):
