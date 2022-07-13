@@ -38,7 +38,7 @@ def start(message):
 		ch = types.InlineKeyboardButton(text="▶ قناة البوت ◀",url="https://t.me/c_p_8")
 		rr.add(me,he,de)
 		rr.add(ch)
-		bot.send_message(message.chat.id,text="هذا البوت مدفوع وليس لك \nصاحب البوت : {owner}\nللتفعيل راسل :",reply_markup=rr)
+		bot.send_message(message.chat.id,text=f"هذا البوت مدفوع وليس لك \nصاحب البوت : {owner}\nللتفعيل راسل :",reply_markup=rr)
                
 @bot.callback_query_handler(func=lambda call: True)
 def masg(call):
