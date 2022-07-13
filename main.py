@@ -15,69 +15,7 @@ server = Flask(__name__)
 logger = telebot.logger
 logger.setLevel(logging.DEBUG)
 
-ban = ['T_4_Y','K_M_E','F_8_W','Z_K_1','T_N_3',
-       'Y_L_6','K_A_2','S_X_1','C_R_J','Y_6_S',
-       'F_P_7','Q_I_9','R_Y_2','I_M_9','C_J_7',
-       'T_P_4','Y_P_7','Q_K_9','C_J_7','J_I_2',
-       'M_K_6','H_B_3','E_G_8','J_I_2','C_B_6',
-       'A_D_6','L_O_8','O_Y_1','C_T_7','Y_O_4',
-       'S_X_9','Y_E_5','U_C_7','U_T_3','N_P_6',
-       'Q_I_9','B_W_9','Q_H_1','P_L_3','N_X_8',
-       'E_G_8','I_J_4','Y_E_5','P_R_0','F_M_0',
-       'Q_L_4','J_J_9','B_M_9','E_G_8','P_K_9',
-       'U_T_3','G_V_5','R_A_4','R_Y_2','M_J_8',
-       'F_D_5','Y_E_5','Q_K_9','M_K_6','X_D_4',
-       'Y_P_1','Z_K_1','S_E_4','C_J_7','T_Z_7',
-       'X_T_7','S_X_1','V_F_9','W_P_6','O_Y_1',
-       'C_D_6','C_F_5','S_X_9','U_X_0','J_I_2',
-       'J_J_3','X_W_4','I_M_9','X_U_4','T_J_8',
-       'O_Y_1','Q_K_9','I_6_W','B_6_V','Y_4_N',
-       'P_9_T','V_8_W','T_2_Y','J_9_N','A_7_C',
-       'X_7_W','C_1_K','O_9_F','G_8_M','L_3_D',
-       'P_3_M','W_5_F','N_7_G','P_1_R','U_8_Q',
-       'K_9_P','P_8_P','T_9_L','C_2_N','C_2_N',
-       'S_0_N','I_5_N','T_5_O','R_5_C','A_1_C',
-       'L_4_Y','B_6_V','H_8_D','J_3_M','T_5_O',
-       'T_6_S','T_5_O','V_5_C','P_9_H','G_5_L',
-       'V_6_M','E_0_P','R_1_D','W_0_C','J_8_C',
-       'V_4_E','N_7_G','Z_4_V','G_1_P','Q_8_P',
-       'L_3_D','V_8_W','B_4_D','X_6_L','X_7_W',
-       'R_6_R','H_0_Y','X_9_Y','A_1_N','F_0_I',
-       'E_5_Q','F_3_E','O_3_K','F_0_L','C_0_S',
-       'K_4_Y','B_0_X','B_8_B','D_5_H','B_0_E',
-       'F_2_I','Q_5_T','Z_9_W','A_1_N','W_1_J',
-       'B_0_S','W_8_H','E_J_Q','N_Y_V','H_H_A',
-       'Z_L_P','U_H_B','F_C_T','Q_X_I','I_G_U',
-       'S_X_X','C_F_Y','J_Y_K','Q_D_G','O_C_O',
-       'V_T_G','D_U_U','Q_V_K','G_C_E','P_F_D',
-       'W_B_G','X_B_K','A_F_T','W_W_L','T_J_Y',
-       'Q_V_H','P_T_Z','U_X_O','F_U_V','G_M_F',
-       'S_G_T','B_Q_L','X_H_F','F_O_M','P_N_X',
-       'L_B_D','X_N_S','X_J_C','O_Z_T','I_F_M',
-       'A_P_S','G_M_F','I_S_B','O_K_G','B_W_P',
-       'N_P_B','I_P_S','G_U_J','U_D_B','W_L_N',
-       'X_X_A','K_X_X','A_D_L','F_F_W','Y_P_U',
-       'I_W_T','N_Y_B','K_M_E','B_I_X','W_O_R',
-       'O_K_G','K_S_H','G_L_J','A_S_S','U_H_B',
-       'F_L_G','A_A_C','W_D_V','F_O_F','B_J_O',
-       'X_E_S','K_T_W','P_Y_Q','V_B_B','S_B_W',
-       'T_C_N','T_P_J','H_U_I','W_I_R','U_H_B',
-       'W_O_R','H_D_X','N_Y_B','B_I_O','E_K_W',
-       'D_X_V','R_I_K','C_N_C','C_F_Y','A_E_G',
-       'C_H_T','O_M_T','Y_W_J','A_A_C','B_X_J',
-       'U_G_C','X_N_S','Y_S_R','E_Q_C','H_K_E',
-       'B_X_Z','D_D_W','X_E_S','B_X_Z','B_D_L',
-       'A_F_T','D_X_V','X_C_Z','I_G_T','I_W_T',
-       'X_W_V','H_V_R','X_S_I','K_S_U','E_J_Q',
-       'P_G_N','U_X_O','B_X_B','W_U_B','T_P_J',
-       'D_S_O','R_G_C','Q_U_W','E_T_U','F_C_T',
-       'K_Q_N','U_D_B','Q_A_U','D_J_X','R_I_Q',
-       'B_V_N','Q_D_W','T_J_Y','W_D_V','B_X_C',
-       'Y_W_J','T_P_V','T_D_T','D_S_O','I_F_M',
-       'X_N_P','Q_U_W','Q_D_O','C_U_P','T_F_O',
-       'K_Z_U','S_X_S','B_T_S','K_Z_A','Z_P_S',
-       'V_T_J','V_Y_Z','N_J_C','C_F_C','I_V_S',
-       'F_P_G','T_B_M','V_F_X','J_G_H','O_P_M']
+     
 
 @bot.message_handler(commands=["start"])
 def start(message):
@@ -164,7 +102,7 @@ def masg(call):
             "Accept-Encoding": "gzip, deflate, br",
             "Accept-Language" : "ar-EG,ar;q=0.9,en-US;q=0.8,en;q=0.7"}
 			response = requests.get(url, headers=headers)
-			if response.text.find('If you have <strong>Telegram</strong>, you can contact <a class="tgme_username_link"')>=0 and d not in ban:
+			if response.text.find('If you have <strong>Telegram</strong>, you can contact <a class="tgme_username_link"')>=0:
 				ok+=1
 				sk+=1
 				bot.send_message(call.message.chat.id,f"‹ يوزرات تلي متاحه ✓\n────── • ✧✧ • ──────\n‹ صدتلك يوزر : @{h}\n────── • ✧✧ • ──────\n•مطور البوت @K_8_U")
@@ -239,7 +177,7 @@ def masg(call):
             "Accept-Encoding": "gzip, deflate, br",
             "Accept-Language" : "ar-EG,ar;q=0.9,en-US;q=0.8,en;q=0.7"}
 			response = requests.get(url, headers=headers)
-			if response.text.find('If you have <strong>Telegram</strong>, you can contact <a class="tgme_username_link"')>=0 and g not in ban:
+			if response.text.find('If you have <strong>Telegram</strong>, you can contact <a class="tgme_username_link"')>=0:
 				ok+=1
 				sk+=1
 				bot.send_message(call.message.chat.id,f"‹ يوزرات تلي متاحه ✓\n────── • ✧✧ • ──────\n‹ صدتلك يوزر : @{x}\n────── • ✧✧ • ──────\n• مطور البوت @K_8_U")
@@ -281,7 +219,7 @@ def masg(call):
             "Accept-Encoding": "gzip, deflate, br",
             "Accept-Language" : "ar-EG,ar;q=0.9,en-US;q=0.8,en;q=0.7"}
 			response = requests.get(url, headers=headers)
-			if response.text.find('If you have <strong>Telegram</strong>, you can contact <a class="tgme_username_link"')>=0 and g not in ban:
+			if response.text.find('If you have <strong>Telegram</strong>, you can contact <a class="tgme_username_link"')>=0:
 				ok+=1
 				sk+=1
 				bot.send_message(call.message.chat.id,f"‹ يوزرات تلي متاحه ✓\n────── • ✧✧ • ──────\n‹ صدتلك يوزر : @{x}\n────── • ✧✧ • ──────\n• مطور البوت @K_8_U")
@@ -321,7 +259,7 @@ def masg(call):
             "Accept-Encoding": "gzip, deflate, br",
             "Accept-Language" : "ar-EG,ar;q=0.9,en-US;q=0.8,en;q=0.7"}
 			response = requests.get(url, headers=headers)
-			if response.text.find('If you have <strong>Telegram</strong>, you can contact <a class="tgme_username_link"')>=0 and g not in ban:
+			if response.text.find('If you have <strong>Telegram</strong>, you can contact <a class="tgme_username_link"')>=0:
 				ok+=1
 				sk+=1
 				bot.send_message(call.message.chat.id,f"‹ يوزرات تلي متاحه ✓\n────── • ✧✧ • ──────\n‹ صدتلك يوزر : @{x}\n────── • ✧✧ • ──────\n• مطور البوت @K_8_U")
@@ -362,7 +300,7 @@ def masg(call):
             "Accept-Encoding": "gzip, deflate, br",
             "Accept-Language" : "ar-EG,ar;q=0.9,en-US;q=0.8,en;q=0.7"}
 			response = requests.get(url, headers=headers)
-			if response.text.find('If you have <strong>Telegram</strong>, you can contact <a class="tgme_username_link"')>=0 and g not in ban:
+			if response.text.find('If you have <strong>Telegram</strong>, you can contact <a class="tgme_username_link"')>=0:
 				ok+=1
 				sk+=1
 				bot.send_message(call.message.chat.id,f"‹ يوزرات تلي متاحه ✓\n────── • ✧✧ • ──────\n‹ صدتلك يوزر : @{x}\n────── • ✧✧ • ──────\n• مطور البوت @K_8_U")
@@ -404,7 +342,7 @@ def masg(call):
             "Accept-Encoding": "gzip, deflate, br",
             "Accept-Language" : "ar-EG,ar;q=0.9,en-US;q=0.8,en;q=0.7"}
 			response = requests.get(url, headers=headers)
-			if response.text.find('If you have <strong>Telegram</strong>, you can contact <a class="tgme_username_link"')>=0 and f not in ban:
+			if response.text.find('If you have <strong>Telegram</strong>, you can contact <a class="tgme_username_link"')>=0:
 				ok+=1
 				sk+=1
 				bot.send_message(call.message.chat.id,f"‹ يوزرات تلي متاحه ✓\n────── • ✧✧ • ──────\n‹ صدتلك يوزر : @{v}\n────── • ✧✧ • ──────\n• مطور البوت @K_8_U")
@@ -441,7 +379,7 @@ def masg(call):
             "Accept-Encoding": "gzip, deflate, br",
             "Accept-Language" : "ar-EG,ar;q=0.9,en-US;q=0.8,en;q=0.7"}
 			response = requests.get(url, headers=headers)
-			if response.text.find('If you have <strong>Telegram</strong>, you can contact <a class="tgme_username_link"')>=0 and c not in ban:
+			if response.text.find('If you have <strong>Telegram</strong>, you can contact <a class="tgme_username_link"')>=0:
 				ok+=1
 				sk+=1
 				bot.send_message(call.message.chat.id,f"‹ يوزرات تلي متاحه ✓\n────── • ✧✧ • ──────\n‹ صدتلك يوزر : @{c}\n────── • ✧✧ • ──────\n• مطور البوت @K_8_U")
@@ -479,7 +417,7 @@ def masg(call):
             "Accept-Encoding": "gzip, deflate, br",
             "Accept-Language" : "ar-EG,ar;q=0.9,en-US;q=0.8,en;q=0.7"}
 			response = requests.get(url, headers=headers)
-			if response.text.find('If you have <strong>Telegram</strong>, you can contact <a class="tgme_username_link"')>=0 and c not in ban:
+			if response.text.find('If you have <strong>Telegram</strong>, you can contact <a class="tgme_username_link"')>=0:
 				ok+=1
 				sk+=1
 				bot.send_message(call.message.chat.id,f"‹ يوزرات تلي متاحه ✓\n────── • ✧✧ • ──────\n‹ صدتلك يوزر : @{c}\n────── • ✧✧ • ──────\n• مطور البوت @K_8_U")
@@ -517,7 +455,7 @@ def masg(call):
             "Accept-Encoding": "gzip, deflate, br",
             "Accept-Language" : "ar-EG,ar;q=0.9,en-US;q=0.8,en;q=0.7"}
 			response = requests.get(url, headers=headers)
-			if response.text.find('If you have <strong>Telegram</strong>, you can contact <a class="tgme_username_link"')>=0 and c not in ban:
+			if response.text.find('If you have <strong>Telegram</strong>, you can contact <a class="tgme_username_link"')>=0:
 				ok+=1
 				sk+=1
 				bot.send_message(call.message.chat.id,f"‹ يوزرات تلي متاحه ✓\n────── • ✧✧ • ──────\n‹ صدتلك يوزر : @{c}\n────── • ✧✧ • ──────\n• مطور البوت @K_8_U")
@@ -555,7 +493,7 @@ def masg(call):
             "Accept-Encoding": "gzip, deflate, br",
             "Accept-Language" : "ar-EG,ar;q=0.9,en-US;q=0.8,en;q=0.7"}
 			response = requests.get(url, headers=headers)
-			if response.text.find('If you have <strong>Telegram</strong>, you can contact <a class="tgme_username_link"')>=0 and c not in ban:
+			if response.text.find('If you have <strong>Telegram</strong>, you can contact <a class="tgme_username_link"')>=0:
 				ok+=1
 				sk+=1
 				bot.send_message(call.message.chat.id,f"‹ يوزرات تلي متاحه ✓\n────── • ✧✧ • ──────\n‹ صدتلك يوزر : @{c}\n────── • ✧✧ • ──────\n• مطور البوت @K_8_U")
@@ -596,7 +534,7 @@ def masg(call):
             "Accept-Encoding": "gzip, deflate, br",
             "Accept-Language" : "ar-EG,ar;q=0.9,en-US;q=0.8,en;q=0.7"}
 			response = requests.get(url, headers=headers)
-			if response.text.find('If you have <strong>Telegram</strong>, you can contact <a class="tgme_username_link"')>=0 and j not in ban:
+			if response.text.find('If you have <strong>Telegram</strong>, you can contact <a class="tgme_username_link"')>=0:
 				ok+=1
 				sk+=1
 				bot.send_message(call.message.chat.id,f"‹ يوزرات تلي متاحه ✓\n────── • ✧✧ • ──────\n‹ صدتلك يوزر : @{j}\n────── • ✧✧ • ──────\n• مطور البوت @K_8_U")
@@ -641,7 +579,7 @@ def masg(call):
             "Accept-Encoding": "gzip, deflate, br",
             "Accept-Language" : "ar-EG,ar;q=0.9,en-US;q=0.8,en;q=0.7"}
 			response = requests.get(url, headers=headers)
-			if response.text.find('If you have <strong>Telegram</strong>, you can contact <a class="tgme_username_link"')>=0 and cs not in ban:
+			if response.text.find('If you have <strong>Telegram</strong>, you can contact <a class="tgme_username_link"')>=0:
 				ok+=1
 				sk+=1
 				bot.send_message(call.message.chat.id,f"‹ يوزرات تلي متاحه ✓\n────── • ✧✧ • ──────\n‹ صدتلك يوزر : @{cc}\n────── • ✧✧ • ──────\n• مطور البوت @K_8_U")
