@@ -35,8 +35,9 @@ def start(message):
 		me = types.InlineKeyboardButton(text="مجهول",url="https://t.me/k_8_u")
 		he = types.InlineKeyboardButton(text="حلم",url="https://t.me/n_n_v")
 		de = types.InlineKeyboardButton(text="دراكون",url="https://t.me/s_l_3")
+		ca = types.InlineKeyboardButton(text="كارولين",url="https://t.me/IIIIIIIINI")
 		ch = types.InlineKeyboardButton(text="▶ قناة البوت ◀",url="https://t.me/c_p_8")
-		rr.add(me,he,de)
+		rr.add(me,he,de,ca)
 		rr.add(ch)
 		bot.send_message(message.chat.id,text=f"هذا البوت مدفوع وليس لك \nصاحب البوت : {owner}\nللتفعيل راسل :",reply_markup=rr)
                
