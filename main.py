@@ -32,7 +32,7 @@ def start(message):
 	else:
 		rr = types.InlineKeyboardMarkup(row_width=2)
 		me = types.InlineKeyboardButton(text="مجهول",url="https://t.me/k_8_u")
-		he = types.InlineKeyboardButton(text="حلم",url="https://t.me/n_n_v")
+		he = types.InlineKeyboardButton(text="حلم",url="https://t.me/q_o_e")
 		de = types.InlineKeyboardButton(text="دراكون",url="https://t.me/s_l_3")
 		ca = types.InlineKeyboardButton(text="كارولين",url="https://t.me/IIIIIIIINI")
 		ch = types.InlineKeyboardButton(text="▶ قناة البوت ◀",url="https://t.me/c_p_8")
@@ -378,7 +378,7 @@ def masg(call):
             "User-Agent": generate_user_agent(),
             "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
             "Accept-Encoding": "gzip, deflate, br",
-            "Accept-Language" : "ar-EG,ar;q=0.9,en-US;q=0.8,en;q=0.7")
+            "Accept-Language" : "ar-EG,ar;q=0.9,en-US;q=0.8,en;q=0.7"}
 				response = requests.get(url, headers=headers)
 				if response.text.find('If you have <strong>Telegram</strong>, you can contact <a class="tgme_username_link"')>=0)
 					ok+=1
