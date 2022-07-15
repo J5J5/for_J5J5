@@ -380,7 +380,7 @@ def masg(call):
             "Accept-Encoding": "gzip, deflate, br",
             "Accept-Language" : "ar-EG,ar;q=0.9,en-US;q=0.8,en;q=0.7"}
 				response = requests.get(url, headers=headers)
-				if response.text.find('If you have <strong>Telegram</strong>, you can contact <a class="tgme_username_link"')>=0)
+				if response.text.find('If you have <strong>Telegram</strong>, you can contact <a class="tgme_username_link"')>=0):
 					ok+=1
 					sk+=1
 					bot.send_message(call.message.chat.id,f"‹ يوزرات تلي متاحه ✓\n────── • ✧✧ • ──────\n‹ صدتلك يوزر : @{c}\n────── • ✧✧ • ──────\n• مطور البوت @K_8_U")
