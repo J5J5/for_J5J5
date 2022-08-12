@@ -25,9 +25,6 @@
             "description": "اسم التطبيق [خلي نفس اول شي لتغيير]",
             "required": "False",
             "value": ""
-        },
-        "OWNER": {
-            "description": "ضع اليوزر الخاص بك"
         }
     },
     "stack": "heroku-20",
