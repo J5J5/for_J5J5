@@ -14,7 +14,7 @@ server = Flask(__name__)
 logger = telebot.logger
 logger.setLevel(logging.DEBUG)
 band = open('banned.txt','r')
-gg = band.split(" ")
+gg = band.split()
      
 
 @bot.message_handler(commands=["start"])
