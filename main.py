@@ -76,8 +76,8 @@ def masg(call):
 		v.add(B)
 		bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id,text="اختر من القائمه بالاسفل .",reply_markup=v)
 	elif call.data =="F1":
-		xu = "MNBVCXZLKJHGFDSAPOIUYTREWQ"
-		xn = "MNBVCXZLKJHGFDSAPOIUYTREWQ"
+		xu = "mnbvcxzlkjhgfdsapoiuytrewq"
+		xn = "mnbvcxzlkjhgfdsapoiuytrewq"
 		xa = "1234567890"
 		ok=0
 		cp=0
@@ -149,9 +149,9 @@ def masg(call):
 		
 	
 	elif call.data =="b4":
-		xu = "MNBVCXZLKJHGFDSAPOIUYTREWQ"
+		xu = "mnbvcxzlkjhgfdsapoiuytrewq"
 		xn = "1234567890"
-		xa = "MNBVCXZLKJHGFDSAPOIUYTREWQ"
+		xa = "mnbvcxzlkjhgfdsapoiuytrewq"
 		ok=0
 		cp=0
 		sk=0
@@ -191,9 +191,9 @@ def masg(call):
 				bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id,text="ok start",reply_markup=mas)
 	
 	elif call.data =="ew1":
-		xu = "MNBVCXZLKJHGFDSAPOIUYTREWQ"
+		xu = "mnbvcxzlkjhgfdsapoiuytrewq"
 		xn = "1234567890"
-		xa = "MNBVCXZLKJHGFDSAPOIUYTREWQ"
+		xa = "mnbvcxzlkjhgfdsapoiuytrewq"
 		ok=0
 		cp=0
 		sk=0
@@ -232,9 +232,9 @@ def masg(call):
 				mas.add(A,E,B,R,M)
 				bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id,text="ok start",reply_markup=mas)
 	elif call.data =="ew":
-		xu = "MNBVCXZLKJHGFDSAPOIUYTREWQ"
+		xu = "mnbvcxzlkjhgfdsapoiuytrewq"
 		xn = "1234567890"
-		xa = "MNBVCXZLKJHGFDSAPOIUYTREWQ"
+		xa = "mnbvcxzlkjhgfdsapoiuytrewq"
 		ok=0
 		cp=0
 		sk=0
@@ -272,9 +272,9 @@ def masg(call):
 				mas.add(A,E,B,R,M)
 				bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id,text="ok start",reply_markup=mas)
 	elif call.data =="b2":
-		xu = "MNBVCXZLKJHGFDSAPOIUYTREWQ"
+		xu = "mnbvcxzlkjhgfdsapoiuytrewq"
 		xn = "1234567890"
-		xa = "MNBVCXZLKJHGFDSAPOIUYTREWQ"
+		xa = "mnbvcxzlkjhgfdsapoiuytrewq"
 		ok=0
 		cp=0
 		sk=0
@@ -315,9 +315,9 @@ def masg(call):
 	
 		
 	elif call.data =="b1":
-		xu = "MNBVCXZLKJHGFDSAPOIUYTREWQ"
+		xu = "mnbvcxzlkjhgfdsapoiuytrewq"
 		xn = "1234567890"
-		xa = "MNBVCXZLKJHGFDSAPOIUYTREWQ"
+		xa = "mnbvcxzlkjhgfdsapoiuytrewq"
 		ok=0
 		cp=0
 		sk=0
@@ -355,9 +355,9 @@ def masg(call):
 				mas.add(A,E,B,R,M)
 				bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id,text="ok start",reply_markup=mas)
 	elif call.data =="F6":
-		xu = "MNBVCXZLKJHGFDSAPOIUYTREWQ"
+		xu = "mnbvcxzlkjhgfdsapoiuytrewq"
 		xn = "1234567890"
-		xa = "MNBVCXZLKJHGFDSAPOIUYTREWQ"
+		xa = "mnbvcxzlkjhgfdsapoiuytrewq"
 		ok=0
 		cp=0
 		sk=0
@@ -393,9 +393,9 @@ def masg(call):
 				    mas.add(A,E,B,R,M)
 				    bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id,text="ok start",reply_markup=mas)
 	elif call.data =="F5":
-		xu = "MNBVCXZLKJHGFDSAPOIUYTREWQ"
+		xu = "mnbvcxzlkjhgfdsapoiuytrewq"
 		xn = "1234567890"
-		xa = "MNBVCXZLKJHGFDSAPOIUYTREWQ"
+		xa = "mnbvcxzlkjhgfdsapoiuytrewq"
 		ok=0
 		cp=0
 		sk=0
@@ -431,9 +431,9 @@ def masg(call):
 				mas.add(A,E,B,R,M)
 				bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id,text="ok start",reply_markup=mas)
 	elif call.data =="F4":
-		xu = "MNBVCXZLKJHGFDSAPOIUYTREWQ"
+		xu = "mnbvcxzlkjhgfdsapoiuytrewq"
 		xn = "1234567890"
-		xa = "MNBVCXZLKJHGFDSAPOIUYTREWQ"
+		xa = "mnbvcxzlkjhgfdsapoiuytrewq"
 		ok=0
 		cp=0
 		sk=0
@@ -469,9 +469,9 @@ def masg(call):
 				mas.add(A,E,B,R,M)
 				bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id,text="ok start",reply_markup=mas)
 	elif call.data =="F3":
-		xu = "MNBVCXZLKJHGFDSAPOIUYTREWQ"
+		xu = "mnbvcxzlkjhgfdsapoiuytrewq"
 		xn = "1234567890"
-		xa = "MNBVCXZLKJHGFDSAPOIUYTREWQ"
+		xa = "mnbvcxzlkjhgfdsapoiuytrewq"
 		ok=0
 		cp=0
 		sk=0
@@ -507,9 +507,9 @@ def masg(call):
 				mas.add(A,E,B,R,M)
 				bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id,text="ok start",reply_markup=mas)
 	elif call.data =="F7":
-		xu = "MNBVCXZLKJHGFDSAPOIUYTREWQ"
+		xu = "mnbvcxzlkjhgfdsapoiuytrewq"
 		xn = "1234567890"
-		xa = "MNBVCXZLKJHGFDSAPOIUYTREWQ"
+		xa = "mnbvcxzlkjhgfdsapoiuytrewq"
 		ok=0
 		cp=0
 		sk=0
@@ -548,9 +548,9 @@ def masg(call):
 				bot.edit_message_text(chat_id=call.message.chat.id,message_id=call.message.message_id,text="ok start",reply_markup=mas)
 				
 	elif call.data =="F10":
-		xu = "MNBVCXZLKJHGFDSAPOIUYTREWQ"
+		xu = "mnbvcxzlkjhgfdsapoiuytrewq"
 		xn = "1234567890"
-		xa = "MNBVCXZLKJHGFDSAPOIUYTREWQ"
+		xa = "mnbvcxzlkjhgfdsapoiuytrewq"
 		ok=0
 		cp=0
 		sk=0
